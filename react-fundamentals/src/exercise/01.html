@@ -20,9 +20,11 @@
 
 <body>
     <script type="module">
+        // create and append root div
         const rootElement = document.createElement('div');
         rootElement.setAttribute('id', 'root');
         document.body.append(rootElement);
+        // create and append div w/ 'Hello World'
         const element = document.createElement('div');
         element.textContent = 'Hello World';
         element.className = 'container';

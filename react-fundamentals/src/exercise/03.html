@@ -17,9 +17,12 @@
     //   children: 'Hello World',
     // })
 
-    const greeting = 'Hello World';
+    const children = 'Hello World';
     const className = 'container';
-    const element = <div className={className}>{greeting}</div>;
+    const props = {children, className};
+    // const element = <div className={className}>{children}</div>;
+    // const element = React.createElement('div', {id: 'my-thing', ...props})
+    const element = <div className="default" {...props}/>;
     console.log(element);
 
     // 💰 there are a few subtle differences between JSX and HTML. One such

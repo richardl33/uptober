@@ -29,10 +29,26 @@
     // with these React API calls
     // 💰 The example in the markdown file should be a good hint for you.
 
-    const element = React.createElement('div', {
-      className: 'container', 
-      children: 'Hello World'
-    });
+    // const element = React.createElement('div', {
+    //   className: 'container', 
+    //   children: 'Hello World'
+    // });
+
+    // can also do this....
+    // const element = React.createElement(
+    //   'div', 
+    //   {className: 'container'}, 
+    //   'Hello World'
+    // );
+    
+    const helloElement = React.createElement('span', null, 'Hello');
+    const worldElement = React.createElement('span', {}, 'World');
+    const element = React.createElement(
+      'div', {
+        className: 'container',
+      },
+      helloElement, ' ', worldElement);
+
     console.log(element);
     ReactDOM.render(element, rootElement);
 

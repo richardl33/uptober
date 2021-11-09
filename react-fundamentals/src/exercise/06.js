@@ -10,6 +10,7 @@ function UsernameForm({onSubmitUsername}) {
   // events (which refreshes the page).
   // 📜 https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault
 
+  const usernameInputRef = React.useRef();
   const handleSubmit = (event) => {
     event.preventDefault();
     const value = event.target.elements.usernameInput.value;
